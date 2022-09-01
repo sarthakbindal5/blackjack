@@ -1,2 +1,3 @@
 # blackjack
 Blackjack game is implemented using basic C++ tools. Some functionalities are yet to be integrated. Will be updated soon...
+Insurance and Split functionalities have to be implemented.
