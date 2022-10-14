@@ -288,12 +288,22 @@ rectifybuyin:
         cin >> bet;
         if(bet == 0)
             break;
+        if(bet > purse)
+        {
+            cout << "Bet amount cannot be greater than balance. Please try again...\n";
+            continue;
+        }
         if(bet >= 10 && bet <= 1000)
             purse += betHand(bet);
         else
         {
             cout << "Invalid bet input. Try again...\n";
             continue;
+        }
+        if(purse == 0)
+        {
+            cout << "Your bankroll is over. EESH\n";
+            break;
         }
     }
     cout << "\nOriginal buy-in amount was $" << buyin << ".\n";
